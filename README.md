@@ -1,1 +1,0 @@
-# go-theses-18-joop-schroen

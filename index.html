@@ -1,35 +1,166 @@
 <!DOCTYPE html>
 
-<html>
+<html prefix="og: http://ogp.me/ns#">
 
 <head>
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35992407-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
 
-	<!-- Title of your page will be displayed in title bar and navigation elements 
+  gtag('config', 'UA-35992407-2');
+</script>
+
+			<meta charset="UTF-8" />
+		<meta http-equiv="&#10005;-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
+		<meta property="og:url"content="http://www.joopschroen.nl/" />
+		<meta property="og:type" content="page" />
+		<meta property="og:title" content="Joop Schro&euml;n"/>
+		<meta property="og:description" content="Graphic Design Portfolio🔰The Hague🇳🇱The Netherlands" />
+		<meta name="keywords" content="Graphic Design" />
+		<meta name="author" content="Joop Schroën" />
+		<meta property="fb:app_id" content="787518608084777" />
+				
+		<!--Meta property for facebook share-->
+	<meta property="og:image" content="https://i.imgur.com/8lYTrA0.png"/>
+
+
+		<!--favicon-->
+    <link rel="icon" href="favicon.ico" type="image/gif"> 
+
+		<!--Link to your external stylesheet file -->
+	<link rel="stylesheet" type="text/css" href="style/site.css"/>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  	<script type="text/javascript" src="jquery-lazy/jquery.lazy.min.js"></script>
+	
+
+		<!-- Title of your page will be displayed in title bar and navigation elements 
 		 of your browser and in the search engines list of results -->
-	<title>HTML Template</title>
+	<title>Joop Schroën — Under Construction</title>
 	
-	<!-- Meta tags concerning display and findability -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="author" content="Your name" />
-	<meta name="description" content="What's this page about. This will be used by search engines to find your page and to display a small summary in the list of search results. Only the first 155 characters are displayed." />
-	
-	<!-- Link to your external stylesheet file -->
-	<link rel="stylesheet" type="text/css" href="style/site.css" />
+
 	
 	
 </head>
 
+<!-- Preloader -->
+
+
+
+<script>
+
+window.onload = function(){ 
+
+            $('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+    
+var yourAudio = document.getElementById('yourAudio'),
+    ctrl = document.getElementById('audioControl');
+
+	ctrl.onclick = function () {
+
+    // Update the Button
+    var pause = ctrl.innerHTML === 'un—mute';
+    ctrl.innerHTML = pause ?  'mute': 'un—mute';
+
+    // Update the Audio
+    var method = pause ? 'play' : 'pause';
+    yourAudio[method]();
+
+    // Prevent Default Action
+    return false;
+};
+
+
+
+};
+    
+</script>
+
+
+
 
 <body>
+	
+	<!-- Preloader -->
+<div id="preloader">
+	<div id="status">loading...</div>
+</div>
+
 
 	<!-- Structures HTML content comes here .. -->
+
+
+		<div id="bg" class="floating"> 
+	
+
+	</div>
+
+	<!-- Audio on page .. -->
+
+	<audio id="yourAudio"  autoplay="onload">
+        	<source src='missing.mp3' type='audio/mpeg' />
+	</audio>
+	
+	
+
+	<a href="#" id="audioControl" class="getcontrol">mute</a>
+
+	
+	
 	
 
 	
 	<!-- imagegroup_01. -->	
-	<h1> JOOP <h1>
+
+
+
 	
+			<a href="#" id="audioControl">
+		<div class="getcontrol">
+		</div>
+	</a>
+				
+		<div class="fade">
+		
+		</div>
+
+		<div id="header">
+		
+		</div>
+		
+		<div id="header2">
+			<a href="mailto:mail@joopschroen.nl?SUBJECT=Love is a social construct" id="title"> Joop Schro&#235n </a>
 	
+		</div>	
+
+		<div id="header3">
+		
+		</div>	
+		
+		<div id="header4">
+			<a href="mailto:mail@joopschroen.nl?SUBJECT=Love is a social construct" id="title"> Graphic Design </a>
+		</div>	
+		
+		<div id="header5">
+		
+		</div>
+		
+		<a href="https://www.instagram.com/joop_schroen/?hl=nl">
+			<img id="insta" src="images/insta.png">
+		</		
+			
 	
 </body>
 

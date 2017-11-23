@@ -13,11 +13,266 @@ html, body { height: 100% }
 
 /* Start your CSS here ****************************************************************/
 
+
 body	{
-	
-	background: black;
+overflow: hidden;	
+background-color: #000000;
+
 }
 
-h1 {
-	color: white;
+/* Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#000000; /* change if the mask should have another color then white */
+	z-index:99; /* makes sure it stays on top */
 }
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+/*	background-image:url(../images/loading.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+	
+		font-family: helvetica;
+	font-variant: normal;
+	font-size: 2vw;
+	color: white;
+	text-align: center;
+
+}
+
+#bg {
+position: absolute;
+
+background-image:url('../images/underconstruction4.png');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+
+width: 90vw;
+height: 90vh;
+top: 5vh;
+left:5vw; 
+
+z-index: 1;
+pointer-events: none;
+
+}
+
+#audioControl	{
+	position: absolute;
+	
+
+	top: 4vh;
+	right: 4vh;
+	
+	width: auto;
+	height: 4vh;
+	
+	
+	font-family: helvetica;
+	font-variant: normal;
+	font-size: 2vw;
+	
+
+}
+
+
+
+
+a	{
+
+
+	font-size: 4vw;
+	line-height:0.8;
+		min-height: 64px;
+	color: black;
+      transition: all 0.3s ease-in-out;
+      text-decoration:none;
+
+}
+
+a:hover{
+	-webkit-stroke-width: 10vw;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1vw 1vw 1vw #000000;
+}
+
+#insta{
+	position: absolute;
+	
+	top: 4vh;
+	left: 4vh;
+	
+	width: 4vh;
+	height: auto;
+	
+}
+
+#header {
+	position: fixed;
+	left: 0%;
+	top: 70%;
+	
+	width: 20vw;
+	height: auto;
+	
+	background-color: none;
+	text-align: center;
+	
+	z-index: 0;
+	
+	border: none;
+	border-color: white;
+	border-width: 1px;
+}
+
+
+#header2 {
+	position: fixed;
+	left: 20%;
+	top: 70%;
+	
+	width: 20vw;
+	height: auto;
+	
+	background-color: none;
+	text-align: center;
+	
+	z-index: 0;
+	
+
+	border-color: white;
+	border-width: 1px;
+}
+
+#header3 {
+	position: fixed;
+	left: 40%;
+	top: 70%;
+	
+	width: 20vw;
+	height: auto;
+	
+	background-color: none;
+	text-align: center;
+	
+	z-index: 0;
+	
+	border: none;
+	border-color: white;
+	border-width: 1px;
+}
+
+#header4 {
+	position: fixed;
+	left: 60%;
+	top: 70%;
+	
+	width: 20vw;
+	height: auto;
+	
+	background-color: none;
+	text-align: center;
+	
+	z-index: 0;
+	
+
+	border-color: white;
+	border-width: 1px;
+
+}
+
+#header5 {
+	position: fixed;
+	left: 80%;
+	top: 70%;
+	
+	width: 20vw;
+	height: auto;
+	
+	background-color: none;
+	text-align: center;
+	
+	z-index: 0;
+	
+	border: none;
+	border-color: white;
+	border-width: 1px;
+}
+
+
+
+#title	{
+	
+
+	font-family: helvetica;
+	font-variant: normal;
+
+	
+
+
+}
+
+.floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+
+}
+
+.fade {
+	width: 100%;
+	height: 100%;
+
+
+
+    -webkit-animation-name: Colorsx;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-animation-name: Colors;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+
+}
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);}
+    }    
+    	
+   
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+@-webkit-keyframes Colorsx{
+    0%   {background-color:black;}
+    20%  {background-color:blue;}
+    40%  {background-color:#00ff00;}
+    60%  {background-color:red;}
+	80%  {background-color:fuchsia;}
+	
+    }	
