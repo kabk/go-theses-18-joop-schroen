@@ -22,23 +22,79 @@ body	{
 	background: #565656;
 }
 
-#audioControl	{
-	position: absolute;
-	
 
-	top: 4vh;
-	right: 4vh;
+/* Preloader */
+#preloader {
 	
-	width: auto;
-	height: 4vh;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#000000; /* change if the mask should have another color then white */
+	z-index:99; /* makes sure it stays on top */
 	
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+/*	background-image:url(../images/loading.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
 	
-	font-family: helvetica;
+font-family: 'IM Fell English', serif;
 	font-variant: normal;
 	font-size: 2vw;
+	color: white;
+	text-align: center;
+
+}
+
+#audioControl	{
+	position: fixed;
+	
+
+	top: 4vw;
+	right: 4vw;
+	
+	width: 8%;
+	
+	text-align: right;
+	
+		color: #d9d9d9;
+	
+font-family: 'IM Fell English', serif;
+	font-size: 1.4vw;
+	
+	background-color: none;
 	
 
 }
+
+#arowup	{
+	
+	font-size: 2vw;
+	
+	position: fixed;
+	width: inherit;
+	
+	text-align: center;
+	
+	min-width: 2%;
+	
+	right: 4.1vw;
+	
+	bottom: 4vw;
+	
+	background-color: none;
+	
+}
+
 
 
 #vignet	{
@@ -55,13 +111,19 @@ body	{
 	
 }
 
+@font-face {
+    font-family: skjald;
+    src: url(skjald-regular-webfont.woff2);
+}
+
 h1	{
 	
 	position: absolute;
 	
 		color: #d9d9d9;
+/*	font-family: skjald;*/
 	
-font-family: 'Cinzel', serif;
+	font-family: 'Cinzel', serif;
 	font-size: 6vw;
 	line-height:0.9;
 	
@@ -116,11 +178,27 @@ background-position:center;
 	   background-color: none;
 }
 
+#rock022	{
+	position: absolute;
+	
+	left: 10%;
+	top: 29%;
+	
+	width: 8%;
+	height: 40%;
+
+	   background-image: url('../images/2.png');   
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+	   background-color: none;
+}
+
 #rock03 {
 	position: absolute;
 	
 	left: 56%;
-	bottom: 6%;
+	bottom: 3%;
 	
 	width: 20%;
 	height: 40%;
@@ -238,7 +316,7 @@ background-position:center;
 	width: 10%;
 	height: 20%;
 
-	   background-image: url('../images/10copy.png');   
+	   background-image: url('../images/10.png');   
 background-repeat:no-repeat;
 background-size:contain;
 background-position:center;
@@ -261,50 +339,110 @@ background-position:center;
 	   background-color: none;
 }
 
+
+
+/* CONTAINER */
+
+
 #textcontainer	{
 	position: absolute;
 	
+	
 	top: 120%;
 	margin-left: 5%;
-	margin-right: 40%;
+	margin-right: 50%;
 	margin-bottom: 10%;
 	
 			column-count: 1;
-		column-rule-color: lightblue;
+		column-rule-color: lightnone;
 		column-gap: 10vw;
+		
+		background-color: none;
 
 }
 
 
-#stone	{
-display: inline-block;	
+#link	{
+	width: inherit;	
+	background: gray;
+}
+
+.stone	{
+	
+	float: right;
 
 	max-width: 100%;
-	width: 60%;
-	float: right;
+	width: 70%;
 	
-	padding-top: 4vw;
+	margin-bottom: 1.68vw;
+	
+	margin-right: -85%;
 		
 		
-	margin-right: -70%;
 	background: none; 
-	pointer-events: none;
 	
 	z-index: 2;
+	
+	background-color: none;
+	
+	pointer-events: painted;
+	
+	overflow: hidden;
 }
 
-#stonesmall	{
-display: inline-block;	
+.stone:hover	{
+	     -webkit-filter: drop-shadow(0vw 0vw 1vw #000000);
+}
 
-	max-width: 100%;
+
+.xxsmall	{
+	
+
+
+	width: 35%;
+	margin-right: -104%;
+}
+
+
+.xsmall	{
+	
+
+
 	width: 40%;
-		float: right;
+	margin-right: -104%;
+}
 
-		
-		
-	margin-right: %;
-	background: none; 
-	pointer-events: none;
+.xsmall2	{
+	
+		width: 40%;
+	margin-right: -70%;
+}
+
+.xsmall3	{
+	
+		width: 40%;
+	margin-right: -90%;
+}
+
+.small	{
+	
+	margin-top: 1vw; 
+
+	width: 60%;
+	margin-right: -70%;
+}
+
+
+.medium	{
+
+	width: 60%;
+	margin-right: -65%;
+}
+
+.medium2 {
+
+	width: 60%;
+	margin-right: -80%;
 }
 
 .extratopmargin	{
@@ -316,18 +454,427 @@ display: inline-block;
 	
 	margin-top: 6vw;
 }
+
+
 #og	{
-display: inline-block;	
+	
+	display: block;
+	
+	
 
 	max-width: 100%;
-	width: 40%;
+	width: 50%;
+	
+	margin-bottom: 1.68vw;
 
 	
-	padding-right: 4vw;
-		
-		
-	margin-top: 2 vw;
+	background: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
 }
+
+#medium	{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    height: 50%;
+	margin-top:12.5%;
+
+}
+
+
+#big	{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    height: 90%;
+	margin-top:2.5%;
+
+}
+
+
+#show01	{
+	
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}
+
+#show02 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}
+
+#show03 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+
+}
+
+#show04 	{
+	
+	
+	display: none;
+	
+	position: fixed;
+	
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+		border: 1vw;
+	border-color: white;
+	
+}		
+
+#show05 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show06 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show07 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show08 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show09 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show10 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show11 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show12 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show13 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}
+
+#show14 	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}	
+
+#show15	{
+	display: none;
+	
+	position: fixed;
+	
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	
+	
+	background: none;
+	
+	z-index: 200;
+	
+	pointer-events: none;
+	
+	
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+}		
+/* #show03 	{
+	
+
+	
+	display: none;
+	
+
+	max-width: 100%;
+	width: inherit;
+	
+	margin-top: 1.68vw;
+	margin-bottom: 1.68vw;
+	
+	background: none;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+*/	
+}
+
+.hidden {
+    height:0px;
+       -webkit-transition:height, 0.5s linear;
+    -moz-transition: height, 0.5s linear;
+    -ms-transition: height, 0.5s linear;
+    -o-transition: height, 0.5s linear;
+    transition: height, 0.5s linear;
+}
+    .hidden.open {
+        height:200px;
+     -webkit-transition:height, 0.5s linear;
+    -moz-transition: height, 0.5s linear;
+    -ms-transition: height, 0.5s linear;
+    -o-transition: height, 0.5s linear;
+    transition: height, 0.5s linear;
+    }
 
 p	{
 	
@@ -361,32 +908,74 @@ font-family: 'IM Fell English', serif;
 		text-align: left;
 		
 	text-indent: 0vw;
-	margin-left: 12vw;	
+	margin-left: 4vw;	
+}
+
+p#handel	{
+		font-size: 1vw;
+		line-height:1.6;
+	
+	font-style: italic;
+	
+	-webkit-filter: drop-shadow(0vw 0vw 1vw #ffffff);
+	
+	
 }
 
 p#subtext	{
 	
+	display: inline;
 	
 	color: #d9d9d9;
 	
 font-family: 'IM Fell English', serif;
 	font-size: 1vw;
-	margin-top:0vw;
 	hyphens: auto;
 	
-	line-height:1.2;
+	margin-top: 0.5vw;
+	
+	line-height:1.68;
 	
 		text-align: left;
 		
-	text-indent: 2vw;	
+	text-indent: 0;	
+}
+
+p#subtext2	{
+	
+	position: fixed;
+	
+	width: 50%;
+	
+	left: 25%;
+	top: 5%;
+	
+	color: #d9d9d9;
+	
+font-family: 'IM Fell English', serif;
+	font-size: 1vw;
+	hyphens: auto;
+	
+	margin-top: 0.5vw;
+	
+	line-height:1.2;
+	
+		text-align: center;
+		
+	text-indent: 0;	
+	
+	background-color: none;
+	
+	text-shadow: 0px 0px 3vw black
 }
 
 p#note	{
 	
-	width: 40%;
-	float: right;
+	position: inherit;
 	
-	margin-right: -60%;
+	width: 100%;
+	
+	right: -100%;
 	margin-top: -1.2vw;
 	
 	color: #d9d9d9;
@@ -396,7 +985,7 @@ font-family: 'IM Fell English', serif;
 	margin-top:0vw;
 	hyphens: auto;
 	
-	line-height:1.2;
+	line-height:1.68;
 	
 		text-align: center;
 		
@@ -460,7 +1049,10 @@ a:hover {
       -webkit-stroke-color: #000000;
       -webkit-fill-color: #000000;
       text-shadow: 1vw 1vw 1vw #000000;
+      
+     -webkit-filter: drop-shadow(0vw 0vw 1vw #000000);
 }
+
 
 
 .fade {
